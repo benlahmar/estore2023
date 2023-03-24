@@ -30,8 +30,10 @@ public class App4IsiApplication implements CommandLineRunner{
 	@Override
 	public void run(String... args) throws Exception {
 
+		User u =new User("toi", "toi", LocalDate.now());
+		service.inscrire(u);
 		
-	  //service.alluser(5L);
+	  
 	}
 
 	
