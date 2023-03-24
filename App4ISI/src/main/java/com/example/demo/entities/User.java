@@ -7,6 +7,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 @Entity
@@ -23,6 +24,9 @@ public class User {
 	
 	@ManyToOne( )
 	Role role;
+	
+	@OneToOne
+	Profile profile;
 	
 	public long getId() {
 		return id;
@@ -63,6 +67,12 @@ public class User {
 	}
 	public void setRole(Role role) {
 		this.role = role;
+	}
+	public Profile getProfile() {
+		return profile;
+	}
+	public void setProfile(Profile profile) {
+		this.profile = profile;
 	}
 	
 	

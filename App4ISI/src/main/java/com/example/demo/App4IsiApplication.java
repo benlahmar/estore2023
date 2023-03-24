@@ -31,7 +31,7 @@ public class App4IsiApplication implements CommandLineRunner{
 	public void run(String... args) throws Exception {
 
 		
-	  service.alluser(5L);
+	  //service.alluser(5L);
 	}
 
 	
