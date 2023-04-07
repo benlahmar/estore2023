@@ -7,6 +7,7 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.example.demo.entities.Profile;
 import com.example.demo.entities.Role;
 import com.example.demo.entities.User;
 import com.example.demo.repos.IRole;
@@ -95,6 +96,26 @@ public class CustomerManager implements ICustomer{
 			u=urepo.save(u);			
 		}		
 		return u;
+	}
+
+	@Override
+	public Profile addprofile(Profile p, long idu) {
+		
+		User u=null;
+		Optional<User> uo = urepo.findById(idu);
+		if(uo.isPresent())
+		{
+			u=uo.get();
+			u.setProfile(p);
+			urepo.save(u);
+		}
+		return p;
+	}
+
+	@Override
+	public User finduser(long id) {
+		// TODO Auto-generated method stub
+		return urepo.findById(id).get();
 	}
 
 }

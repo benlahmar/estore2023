@@ -5,6 +5,10 @@ import javax.persistence.Embeddable;
 @Embeddable
 public class Adresse {
 
+	public Adresse() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
 	String rue;
 	String ville,pays;
 	int codep;
@@ -32,6 +36,13 @@ public class Adresse {
 		return codep;
 	}
 	public void setCodep(int codep) {
+		this.codep = codep;
+	}
+	public Adresse(String rue, String ville, String pays, int codep) {
+		super();
+		this.rue = rue;
+		this.ville = ville;
+		this.pays = pays;
 		this.codep = codep;
 	}
 	

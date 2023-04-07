@@ -2,6 +2,7 @@ package com.example.demo.entities;
 
 import java.time.LocalDate;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -25,7 +26,7 @@ public class User {
 	@ManyToOne( )
 	Role role;
 	
-	@OneToOne
+	@OneToOne(cascade = CascadeType.ALL)
 	Profile profile;
 	
 	public long getId() {

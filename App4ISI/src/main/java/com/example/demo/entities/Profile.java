@@ -37,6 +37,11 @@ public class Profile {
 	User user;
 	
 
+	public Profile() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
 	public long getNum() {
 		return num;
 	}
@@ -91,6 +96,23 @@ public class Profile {
 
 	public void setAddresse(Adresse addresse) {
 		this.addresse = addresse;
+	}
+
+	public Profile(String nom, String[] prenoms, LocalDate date, String email, String photo) {
+		super();
+		this.nom = nom;
+		this.prenoms = prenoms;
+		this.date = date;
+		this.email = email;
+		this.photo = photo;
+	}
+
+	public User getUser() {
+		return user;
+	}
+
+	public void setUser(User user) {
+		this.user = user;
 	}
 	
 	
